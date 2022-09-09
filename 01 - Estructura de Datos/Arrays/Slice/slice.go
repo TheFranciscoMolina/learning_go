@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	//Slicen
+	//Slicen deriba de un arreglo
 	numeros := []int{1, 2, 3}
 	fmt.Println("Sin slice: ", numeros)
 	numeros = append(numeros, 6, 5, 4)
