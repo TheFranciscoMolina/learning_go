@@ -32,11 +32,15 @@ func main() {
 
 	estudiantes := make(map[string][]int)
 	fmt.Println(estudiantes)
+
 	//Le pasamos valores:
 	estudiantes["Francisco"] = []int{22, 25, 30}
 	estudiantes["Daniel"] = []int{4, 21, 5}
 	fmt.Println(estudiantes)
-	//Imprimo solo uno:
+
+	//Imprimo solo un array:
 	fmt.Println("Los datos de Fran son: ", estudiantes["Francisco"])
 
+	//imprimo solo un elemento de ese array:
+	fmt.Println("Solo un elemento de la lista: ", estudiantes["Francisco"][0])
 }
