@@ -11,4 +11,32 @@ func main() {
 
 	fmt.Println(dias)
 
+	//Agrego los datos a ese mapa:
+	dias[0] = "Domingo"
+	dias[1] = "Lunes"
+	dias[2] = "Martes"
+	dias[6] = "Sabado"
+	dias[3] = "Miercoles"
+	dias[5] = "Viernes"
+	dias[4] = "Jueves"
+	fmt.Println(dias)
+
+	//Quito el valor del mapa usando delete:
+
+	delete(dias, 2)
+	fmt.Println(dias)
+	fmt.Println("La longitud del mapa es: ", len(dias))
+
+	//Mapa un póco mas complejo:
+	//Por ejm, una clave que tiene como valor un arreglo:
+
+	estudiantes := make(map[string][]int)
+	fmt.Println(estudiantes)
+	//Le pasamos valores:
+	estudiantes["Francisco"] = []int{22, 25, 30}
+	estudiantes["Daniel"] = []int{4, 21, 5}
+	fmt.Println(estudiantes)
+	//Imprimo solo uno:
+	fmt.Println("Los datos de Fran son: ", estudiantes["Francisco"])
+
 }
