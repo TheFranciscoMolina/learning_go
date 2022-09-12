@@ -13,24 +13,35 @@ func main() {
 	var total, descuento float64
 	var datoDeDescuento string
 
-	fmt.Print("***Consumidor final***")
-	fmt.Print("Total: ")
+	fmt.Println("****Facturador:***")
 	fmt.Scanln(&total)
 
 	if total >= 0 {
-		if total > 100 {
+		if total <= 100 {
 			datoDeDescuento = "10%"
 			descuento = total * 0.10
-			fmt.Printf("Wow! Tienes un %d de descuento!", datoDeDescuento)
-			fmt.Printf("Equivale a: %d", descuento)
-		}
-		if total > 200 {
+		} else if total > 100 && total <= 200 {
 			datoDeDescuento = "20%"
 			descuento = total * 0.20
-			fmt.Printf("Wow! Tienes un %d de descuento!", datoDeDescuento)
-			fmt.Printf("Equivale a: %d", descuento)
+		} else if total < 200 {
+			datoDeDescuento = "30%"
+			descuento = total * 0.30
 		}
 	} else {
 		fmt.Println("Error: El monto total no puede ser menor a 0.")
 	}
+
+	//Operaciones:
+	montoConDescuento := total - descuento
+	iva := montoConDescuento * 0.25
+	totalFinal := montoConDescuento + iva
+
+	//Impromo los datos:
+
+	fmt.Printf("WOW! Tienes un descuento del %s \n", datoDeDescuento)
+	fmt.Println("El total es de: $", total)
+	fmt.Println("Se desconto: $", montoConDescuento)
+	fmt.Println("El IVA es de: $", iva)
+	fmt.Println("El total a pagar es de: $", totalFinal)
+	fmt.Println("**Cerrando sistema**")
 }
