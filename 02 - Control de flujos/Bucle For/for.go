@@ -21,4 +21,10 @@ func main() {
 	for i := 0; i <= 10; i++ {
 		fmt.Println("Esta es la vuelta n°", i)
 	}
+
+	for i := 50; i <= 100; i++ {
+		if i%2 == 0 {
+			fmt.Println("El n°", i, "es par.")
+		}
+	}
 }
