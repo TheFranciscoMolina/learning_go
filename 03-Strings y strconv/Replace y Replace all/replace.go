@@ -5,11 +5,11 @@ import (
 	"strings"
 )
 
-func reeplace(palabra string) {
+func toReplace(palabra string) {
 	palabra = strings.Replace(palabra, "a", "i", 4)
 	fmt.Println(palabra)
 }
 
 func main() {
-	reeplace("no me la contes")
+	toReplace("no me la contes")
 }
