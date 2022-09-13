@@ -1,9 +1,16 @@
 package main
 
-import "strings"
+import (
+	"fmt"
+	"strings"
+)
 
 func esPalindromo(palabra string) {
-	palindro = strings.ToLower(palabra)
+	palabra = strings.ToLower(palabra)
+
+	fmt.Println(palabra)
 }
 
-func main() {}
+func main() {
+	esPalindromo("ya sabia")
+}
