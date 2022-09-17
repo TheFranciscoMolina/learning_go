@@ -15,7 +15,15 @@ func (change *Usuario) changePassword(newPassword string) {
 	fmt.Println("La nueva contraseña es:", change.contraseña)
 }
 
+//Herencia:
+type Invitado struct {
+	Usuario
+	promedio float64
+}
+
 func main() {
+
+	//Creo objetos de esa estructura:
 	nuevoUsuario := Usuario{"Fran", "asd123"}
 	fmt.Println(nuevoUsuario)
 
@@ -28,4 +36,16 @@ func main() {
 	otroUsuario.changePassword("nuevopass")
 
 	fmt.Println(otroUsuario)
+
+	//Objetos y herencia:
+
+	invitadoUno := Invitado{
+		promedio: 125.3,
+	}
+
+	invitadoUno.nombre = "User1"
+	invitadoUno.contraseña = "qwerty"
+
+	fmt.Println(invitadoUno)
+
 }
