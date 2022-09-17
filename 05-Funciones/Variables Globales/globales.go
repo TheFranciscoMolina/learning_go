@@ -17,7 +17,8 @@ func adios() {
 
 func main() {
 	saludo := "Saludos desde main!"
-	hola()
+	//Usando "defer" hago que esa funcion se ejecute al final
+	defer hola()
 	adios()
 	fmt.Println(saludo)
 }
