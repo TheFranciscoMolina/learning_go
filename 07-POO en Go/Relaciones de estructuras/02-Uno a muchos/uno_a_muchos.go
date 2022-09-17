@@ -2,36 +2,31 @@ package main
 
 import "fmt"
 
-type Usuario struct {
+type Curso struct {
 	nombre string
-	email  string
-	activo bool
+	videos []Videos
 }
 
-type Estudiante struct {
-	user   Usuario
-	codigo string
+type Videos struct {
+	titulo string
+	curso  Curso
 }
 
 func main() {
 
-	francisco := Usuario{
-		nombre: "Francisco",
-		email:  "fdm.molina@gmail.com",
-		activo: true,
-	}
-	/* moli := Usuario{
-		nombre: "Moli",
-		email:  "fdm.moli@gmail.com",
-		activo: true,
-	} */
+	video1 := Videos{titulo: "00-Introduccion"}
+	video2 := Videos{titulo: "01-Instalacion"}
 
-	franciscoEstudiante := Estudiante{
-		user:   francisco,
-		codigo: "0x23at434sdzs22",
+	curso := Curso{
+		nombre: "APrender GO",
+		videos: []Videos{video1, video2},
 	}
 
-	fmt.Println(francisco)
-	fmt.Println(franciscoEstudiante)
+	video1.curso = curso
+	video2.curso = curso
+
+	for _, video := range curso.videos {
+		fmt.Println(video.titulo)
+	}
 
 }
