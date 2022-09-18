@@ -11,5 +11,7 @@ func main() {
 	persona1 := models.Persona{}
 	persona1.Constructor("Francisco", 30)
 	fmt.Println(persona1)
+	persona1.GetName()
+	persona1.GetEdad()
 
 }
